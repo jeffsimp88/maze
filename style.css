@@ -1,0 +1,169 @@
+:root{
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: 'Hylian';
+    src: url('fonts/Triforce.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "NES Pixel";
+    src: url('fonts/Pixel_NES.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background: rgb(34, 34, 34);
+    color: whitesmoke;
+    font-family: 'Hylian';
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: normal;
+    margin: 8px;
+    color: rgb(184, 3, 3);
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#maze{
+  
+    background-color: rgb(0, 70, 0);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.topBox{
+    display: flex;
+}
+
+#topBox{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: 5px;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    width: 200px;
+    height: 95px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+.row{
+    
+    flex-grow: 1;
+    display: flex;
+}
+
+.block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    flex-grow: 1;
+    border: 1px solid transparent;
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    image-rendering: pixelated;
+    background-repeat: repeat;
+    background-image: url('imgs/GreenBlock.gif');
+}
+
+.block.wall{
+    background-color: rgb(2, 2, 78);
+    background-image: url('imgs/BlueWall.gif');
+    
+}
+
+.block.start{
+    background-color: darkred;
+    image-rendering: pixelated;
+    background-image: url('imgs/BlueDoor.gif');
+    background-repeat: repeat;
+
+}
+.block.finish{
+    background-color: goldenrod;
+    
+}
+
+#player{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    image-rendering: pixelated;
+    height: 35px;
+    width: 35px;
+    background-image: url('imgs/LinkRight.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#triforce {
+    position: absolute;
+    left: 810px;
+    top: 325px;
+    background-image: url('imgs/Triforce.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    height: 25px;
+    width: 25px;
+}
+
+#winner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: none;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    font-family: 'NES Pixel';
+    font-size: 11px;
+}
+
+img{
+    height: 50;
+    image-rendering: pixelated;
+
+}
+
+#fire{
+    background-image: url("imgs/Fire.gif");
+    image-rendering: pixelated;
+    height: 95px;
+    width: 95px;
+    background-color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+button{
+    font-family: "NES Pixel";
+    color: white;
+    font-size: 11px;
+    background-color: darkgreen;
+}
